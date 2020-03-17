@@ -1,0 +1,33 @@
+<h1 class="my-4">{{data.name}}</h1>
+
+<div class="row">
+
+    <div class="col-md-8">
+        <img class="img-fluid" [src]="data.featured_image" alt="">
+    </div>
+
+    <div class="col-md-4">
+        <h3 class="my-3">Overview</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="overview">Phone Number</p>
+                <p>{{data.phone_numbers}}</p>
+            </div>
+            <div class="col-md-6">
+                <p class="overview">Average Cost</p>
+                <p>{{data.average_cost_for_two |  currency:data.currency }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="overview">Cuisines</p>
+                <p>{{data.cuisines}}</p>
+            </div>
+            <div class="col-md-6">
+                <p class="overview">Opening hours</p>
+                <p>{{data.timings }}</p>
+            </div>
+        </div>
+        <h3 class="my-3">Address</h3>
+        <p>{{data.location.address}}<br />{{data.location.city}}</p>
+    </div>

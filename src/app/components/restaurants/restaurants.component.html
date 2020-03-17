@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let data of restaurants">
+      <figure class="card card-product">
+        <div class="img-wrap"><img [src]="data.restaurant.featured_image" class="img-thumbnail"></div>
+        <figcaption class="info-wrap">
+          <h4 class="title">{{data.restaurant.name}}</h4>
+          <p class="desc">{{data.restaurant.cuisines}}</p>          
+        </figcaption>
+        <div class="bottom-wrap">
+          <a (click)="laodDetail(data.restaurant)" class="btn btn-sm btn-primary float-right">More</a>
+          <div class="price-wrap h5">
+            Start From <span class="price-new">{{data.restaurant.average_cost_for_two |  currency:data.restaurant.currency }}</span>
+          </div>
+        </div>
+      </figure>
+    </div>    
+  </div>
